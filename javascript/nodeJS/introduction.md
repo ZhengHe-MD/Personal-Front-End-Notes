@@ -7,6 +7,6 @@ A project help you write server side code in javascript.
 * Better ways to organize our code into reusable pieces. See [module]('./stream.md'), [class]('./class.md')
 * Ways to deal with files. See [stream]('./stream.md'), [fs]('./fs.md').
 * Ways to deal with databases.
-* The ability to communicate over the internet.
-* The ability to accept requests and send responses.
+* The ability to communicate over the internet. [stream]('./stream.md')
+* The ability to accept requests and send responses. [http]('./http.md')
 * A way to deal with work that takes a long time. See [syncAndAsync]('./syncAndAsync.md'), [event]('./event.md'), [libuv]('./libuv.md').

@@ -1,0 +1,16 @@
+{
+  "name": "dataStructureWithJavascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "List.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Zheng He <zhenghe@madadata.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.0.2"
+  }
+}

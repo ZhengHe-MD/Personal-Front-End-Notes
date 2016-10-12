@@ -83,18 +83,6 @@ readFileAsPromise(csvFilePath)
   // look at the codes below, think about generator function definition as async and
   // yield inside generator as await. It's just the same except some details
 
-  function requestFile(path) {
-    return new Promise((resolve, reject) => {
-      fs.readFile(path, (err, data) => {
-        if (err) {
-          reject(err)
-        } else {
-          resolve(data)
-        }
-      })
-    })
-  }
-
   function runGenerator(g) {
     let ret
     const it = g()
@@ -115,9 +103,9 @@ readFileAsPromise(csvFilePath)
   }
 
   function* getFiles() {
-    const result1 = yield fsp.readFile(csvPathFile)
+    const result1 = yield readFileAsPromise(csvPathFile)
     const filename = result1.toString('utf-8').trim()
-    const result2 = yield fsp.readFile(path.join(__dirname, filename))
+    const result2 = yield readFileAsPromise(path.join(__dirname, filename))
     const data = result2.toString('utf-8').trim()
     assert.equal(data, 'asynchronous')
   }

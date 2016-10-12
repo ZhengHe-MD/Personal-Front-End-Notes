@@ -222,9 +222,9 @@ var readJSON = async(function* (filename) {
         if (result.done) return result.value
 
         return result.value.then(function (res) {
-          return hanle(generator.next(res))
+          return handle(generator.next(res))
         }, function (err) {
-          return hanle(generator.throw(err))
+          return handle(generator.throw(err))
         })
       }
 
